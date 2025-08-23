@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-color: #f4f4f4;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3, h4{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    padding: 2vh;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+li{
+    list-style: none;
+    padding: 3vh;
+    background-color: #f4f4f4;
+    border-radius: 30px;
+    border: 2px solid #333;
+    width: 50vh;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+    font-size: 2.0vh;
+    text-align: center;
+}
+
+.title,.company,.description{
+    text-align: left;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+    font-size: 4.0vh;
+}
+
+
+#profilePic{
+    max-width: 40%;
+    height: auto;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+
+
+.firstSection{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 4vh;
+}
+
+.material-symbols-outlined.icon-lg {
+  font-size: 100px;
+}
+
+.material-symbols-outlined.icon-md {
+  font-size: 3vh;
+}
+
+.arrowDown {
+    margin-bottom: 20vh;
+}
+
+.secondSection{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.thirdSection{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+.fourthSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 100px;
+    height: 100vh;
+}
+
+
+.tabs-radio {
+    display: none; 
+}
+
+.tabs-label {
+    display: flex;
+    flex: 1;
+    text-align: center;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.tab-content {
+    order: 1;
+    display: flex-start;
+    width: 100%;
+    height: 100vh;
+    margin-top: 10px;
+    line-height: 1.5;
+    border-top: 2px solid #000;
+    display: none;
+}
+
+.tabs-radio:checked + .tabs-label {
+    font-weight: 800;
+    color: #000;
+}
+
+.tabs-radio:checked + .tabs-label + .tab-content {
+    display: initial;
+}
+
+.tabs-label:hover {
+    background-color: #C0C0C0;
+    border-radius: 50px;
+}
+/* From Uiverse.io by Voxybuns */ 
+button {
+  /* Variables */
+  --button_radius: 0.75em;
+  --button_color: #e8e8e8;
+  --button_outline_color: #000000;
+  font-size: 2vh;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+  margin-top: 20px;
+}
+
+.cvButton {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+button:hover .cvButton {
+  transform: translateY(-0.33em);
+}
+
+button:active .cvButton {
+  transform: translateY(0);
+}
+
+.autoShow {
+    animation: text-appear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fadeIn {
+    animation: fadeIn 1s ease-in; /* remove infinite*/
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInDown {
+    animation: fadeInDown 1s ease-out infinite;
+
+}
+
+@keyframes text-appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInUp {
+    animation: fadeInUp 1s ease-out infinite;
+}
+
+
+@media (max-width: 600px) {
+    .tabs-label {
+      font-size: 0; /* hide text */
+    }
+    .tabs-label .material-symbols-outlined {
+      font-size: 30px; /* make icon bigger if you like */
+    }
+}
+
+.description {
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #333;
+}
+
+time{
+    color: #333;
+}
+
+#experience:checked ~ .experience,
+#project:checked ~ .projects,
+#education:checked ~ .education,
+#skills:checked ~ .skills {
+  display: block;
+}
+
+.tab-content .event {
+  opacity: 0;
+  transform: translateY(12px);
+  --stagger: 150ms;  /* gap between items */
+  --dur: 500ms;
+  --easing: cubic-bezier(.2,.7,.2,1);
+}
+
+#experience:checked ~ .experience .event,
+#project:checked ~ .projects .event,
+#education:checked ~ .education .event,
+#skills:checked ~ .skills .event {
+  animation: fade-up var(--dur) var(--easing) forwards;
+  animation-delay: calc(var(--i) * var(--stagger));
+}
+
+@keyframes fade-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .tab-content .card {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+abbr {
+    text-decoration: none;
+}
+
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-weight: 700;
+    align-items: center;
+    line-height: 2em;
+}
+
+.icon{
+    margin-right: 5px;
+}
