@@ -338,3 +338,10 @@ abbr {
 .icon{
     margin-right: 5px;
 }
+
+a:hover.tag{
+    background-color: #C0C0C0;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 0.2em 0.2em;
+}
